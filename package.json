@@ -1,0 +1,28 @@
+{
+  "name": "dsh-composer-autocomplete",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Inline ghost-text next-word prediction for the DeepSeek Harness composer: auto-suggests your next words (and the likely reply/option) from context; Tab to accept.",
+  "license": "MIT",
+  "author": { "name": "Strange", "email": "strangeyu911@gmail.com" },
+  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "composer", "autocomplete", "prediction"],
+  "repository": { "type": "git", "url": "https://github.com/strangeyu911-tech/dsh-composer-autocomplete" },
+  "homepage": "https://github.com/strangeyu911-tech/dsh-composer-autocomplete#readme",
+  "bugs": { "url": "https://github.com/strangeyu911-tech/dsh-composer-autocomplete/issues" },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "README.md", "LICENSE", "locale/*.json", "icon.svg"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}
