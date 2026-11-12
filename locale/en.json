@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Composer Predict",
+    "description": "Predicts the words you are about to type in the composer from context; press Tab to accept, Ctrl+Space for an AI prediction."
+  }
+}
